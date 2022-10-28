@@ -1,7 +1,9 @@
 import './App.css';
+import Homepage from './components/Homepage/Homepage';
 import Product from './components/Product/Product'
 
 function App() {
+  /*
   const product1 = {
     "id": 1,
     "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
@@ -24,20 +26,11 @@ function App() {
       "rating": {
       "rate": 3.9,
       "count": 120
-      }
-      };
+      } 
+      };*/
   return (
     <div className="App">
-      <h1>Hello World!</h1>
-      <Product title = {product1.title}
-      price={product1.price}
-      category={product1.category}
-      image={product1.image}/>
-
-<Product title = {product2.title}
-      price={product2.price}
-      category={product2.category}
-      image={product2.image}/>
+      <Homepage />
 
     </div>
   );

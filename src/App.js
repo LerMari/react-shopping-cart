@@ -1,6 +1,9 @@
 import './App.css';
+import {BrowserRouter, Route, Routes} from 'react-router-dom'
+import Cart from './components/Cart/Cart';
 import Homepage from './components/Homepage/Homepage';
 import Product from './components/Product/Product'
+
 
 function App() {
   /*
@@ -30,6 +33,13 @@ function App() {
       };*/
   return (
     <div className="App">
+      <BrowserRouter>
+      <Routes>
+        <Route path="/products" element={<Homepage />} />
+        <Route path="/cart" element={<Cart />} />
+        </Routes>
+      </BrowserRouter>
+      <Cart />
       <Homepage />
 
     </div>

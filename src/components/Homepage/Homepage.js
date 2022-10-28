@@ -42,9 +42,19 @@ function Homepage() {
     });
     console.log("fetch");
   }  
+
+  React.useEffect(
+    ()=>{
+        console.log("page loaded");
+        fetchProducts()
+    }, []
+
+
+  )
+
   return (
     <div>
-        <button onClick={fetchProducts}>Fetch Products</button>
+        {/* <button onClick={fetchProducts}>Fetch Products</button> */}
         <div className="prod-cont">
             {products.map(item => {
             return <Product key={item.id}

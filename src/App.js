@@ -2,8 +2,9 @@ import './App.css';
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import Cart from './components/Cart/Cart';
 import Homepage from './components/Homepage/Homepage';
-import Product from './components/Product/Product'
-
+import Product from './components/Product/Product';
+import ProductDetail from './components/ProductDetail/ProductDetail';
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
   /*
@@ -34,13 +35,17 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+      <Navbar />
       <Routes>
-        <Route path="/products" element={<Homepage />} />
+        <Route exact path="/" element={<Homepage />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/detail" element={<ProductDetail/>} />
+
+
         </Routes>
       </BrowserRouter>
-      <Cart />
-      <Homepage />
+{/*      <Cart />
+      <Homepage />*/}
 
     </div>
   );

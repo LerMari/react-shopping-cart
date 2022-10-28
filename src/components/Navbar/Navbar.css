@@ -1,0 +1,13 @@
+.navbar{
+    background-color: lightblue;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navlink{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}

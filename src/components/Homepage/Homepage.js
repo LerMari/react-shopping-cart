@@ -1,10 +1,14 @@
+import axios from 'axios';
 import React from 'react'
 import Product from '../Product/Product';
+import './Homepage.css';
 
 function Homepage() {
 
     //state for product info
-    const[products, setProducts] = React.useState([
+    const[products, setProducts] = React.useState([]);
+
+        /*
         {
             "id": 1,
             "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
@@ -28,16 +32,21 @@ function Homepage() {
                 "rate": 3.9,
                 "count": 120
                 } 
-                }
-    ]);
-
+                }*/
+    
   const fetchProducts = () => {
+    axios.get("https://fakestoreapi.com/products")
+    .then (response => {
+        //console.log(response.data)
+        setProducts(response.data);
+    });
     console.log("fetch");
   }  
   return (
     <div>
         <button onClick={fetchProducts}>Fetch Products</button>
-        {products.map(item => {
+        <div className="prod-cont">
+            {products.map(item => {
             return <Product key={item.id}
                             title={item.title} 
                             price={item.price}
@@ -45,6 +54,7 @@ function Homepage() {
                             image={item.image}
             />
         })}
+        </div>
     </div>
   )
 }

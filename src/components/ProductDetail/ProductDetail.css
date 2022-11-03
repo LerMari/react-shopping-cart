@@ -1,0 +1,17 @@
+.product-desc-container{
+    border: solid 1px blueviolet;
+    display: flex;
+    align-items:center;
+    margin: 80px;
+}
+
+.product-desc-container img{
+    height: 500px;
+    padding-right: 20px;
+
+}
+
+.product-desc-text {
+    width: 50%;
+    border: solid 1px blue;
+}

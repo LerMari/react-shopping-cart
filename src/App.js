@@ -1,4 +1,5 @@
 import './App.css';
+import React from 'react'
 import {BrowserRouter, Route, Routes, Navigate} from 'react-router-dom'
 import Cart from './components/Cart/Cart';
 import Homepage from './components/Homepage/Homepage';
@@ -32,14 +33,31 @@ function App() {
       "count": 120
       } 
       };*/
+
+  const [cartProducts, setCartProducts] = React.useState([]);    
+  
+  function addProductToCart(productToAdd){
+    console.log(productToAdd);
+    setCartProducts([...cartProducts, productToAdd])
+  }
+  
+  function removeFromCart(productToRemove){
+    console.log(productToRemove);
+    const newCartProducts = cartProducts.filter(item => item.id !== productToRemove.id)
+    console.log(newCartProducts);
+    setCartProducts(newCartProducts);
+  
+  }
+  
   return (
     <div className="App">
       <BrowserRouter>
       <Navbar />
       <Routes>
         <Route exact path="/products" element={<Homepage />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/products/:id" element={<ProductDetail/>} />
+        <Route path="/cart" element={<Cart cartProducts={cartProducts}
+                            removeFromCart={removeFromCart}/>} />
+        <Route path="/products/:id" element={<ProductDetail addProductToCart={addProductToCart}/>} />
         <Route path="*" element={<Navigate to="/products" replace />} />
 
 

@@ -3,7 +3,7 @@ import axios from 'axios'
 import {useParams} from 'react-router-dom'
 import './ProductDetail.css'
 
-function ProductDetail() {
+function ProductDetail(props) {
   console.log("need param")
   const params = useParams();
   console.log(params.id);
@@ -25,7 +25,7 @@ function ProductDetail() {
         <h2>${selectedProduct?.price}</h2>
         <h4>Description</h4>
         <p>{selectedProduct?.description}</p>
-        <button>Add to cart</button>
+        <button onClick={()=>props.addProductToCart(selectedProduct)}>Add to cart</button>
       </div>
     </div>
   )

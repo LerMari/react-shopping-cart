@@ -1,0 +1,16 @@
+.cartLineItem img {
+height: 100px;
+}
+
+.cartLineItem button {
+    height: 80%;
+}
+
+.cartLineItem {
+    border: solid 1px yellow;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}

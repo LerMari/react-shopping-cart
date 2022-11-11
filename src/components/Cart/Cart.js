@@ -1,13 +1,14 @@
-import React from 'react'
+import React from 'react';
+import "./Cart.css";
 
 
 function Cart(props) {
   return (
-    <div>
+    <div class="cartContainer">
       <h1>Cart</h1>
       {
         props.cartProducts.map(item => (
-          <div key={item.id}>
+          <div class ="cartLineItem"key={item.id}>
             <img src={item.image} alt={item.title} />
             <h3>{item.title}</h3>
             <p>{item.price}</p>

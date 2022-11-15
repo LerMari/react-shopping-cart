@@ -5,7 +5,7 @@ import './Product.css'
 function Product(props) {
   return (
     <Link to={`/products/${props.id}`}>
-    <div>
+    <div class="productDisplay">
         <h1>{props.title}</h1>
         <p>{props.price}</p>
         <p>{props.category}</p>

@@ -10,6 +10,8 @@ import Navbar from './components/Navbar/Navbar';
 function App() {
   const [cartProducts, setCartProducts] = React.useState([]);    
   
+  const [productSearchValue, setProductSearchValue] = React.useState("");
+
   function addProductToCart(productToAdd){
     console.log(productToAdd);
     let newCart = [];
@@ -55,12 +57,19 @@ function updateCartQuantity(productToChange, increase){
   
   }
   
+function handleProductSearch(searchInput){
+  console.log("in app", searchInput)
+  setProductSearchValue(searchInput);
+}
+
+
   return (
     <div className="App">
       <BrowserRouter>
-      <Navbar />
+      <Navbar handleProductSearch={handleProductSearch} />
       <Routes>
-        <Route exact path="/products" element={<Homepage />} />
+        <Route exact path="/products" element={<Homepage 
+                                      productSearchValue={productSearchValue}/>} />
         <Route path="/cart" element={<Cart cartProducts={cartProducts}
                             removeFromCart={removeFromCart}
                             updateCartQuantity={updateCartQuantity} />} />

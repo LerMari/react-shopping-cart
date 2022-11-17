@@ -3,7 +3,7 @@ import React from 'react'
 import Product from '../Product/Product';
 import './Homepage.css';
 
-function Homepage() {
+function Homepage(props) {
 
     //state for product info
     const[products, setProducts] = React.useState([]);
@@ -56,7 +56,14 @@ function Homepage() {
     <div>
         {/* <button onClick={fetchProducts}>Fetch Products</button> */}
         <div className="prod-cont">
-            {products.map(item => {
+            {products.filter(
+              item => props.productSearchValue === ""?
+              item :
+              item.title.toLowerCase().includes(props.productSearchValue.
+                toLowerCase()) ? item: null
+            )
+            
+            .map(item => {
             return <Product key={item.id}
                             id={item.id}
                             title={item.title} 

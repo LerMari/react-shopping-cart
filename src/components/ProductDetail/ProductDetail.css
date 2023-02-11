@@ -1,5 +1,6 @@
 .product-desc-container{
     border: solid 1px blueviolet;
+    background-color: white;
     display: flex;
     align-items:center;
     margin: 80px;

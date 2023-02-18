@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import {Link} from 'react-router-dom'
 import './Navbar.css';
-import {FcShop} from "react-icons/fc";
+import {FcShop, FcSearch} from "react-icons/fc";
 
 function Navbar(props) {
   const [navSearchInput, setNavSearchInput] = React.useState('');
@@ -26,19 +26,23 @@ function Navbar(props) {
 
   return (
     <div className="navbar">
-      <FcShop  className="nav-icon"/>
+
+      <div className="logo-cont"><h1 id="logo">ReactCart</h1>
+      <FcShop  className="nav-icon"/></div>
+
         <Link className="navlink" to="/">Homepage</Link>
         <Link className="navlink" to="/cart">Cart</Link>
         <Link className="navlink" to="/detail">Product Detail</Link>
 
-        <form onSubmit={handleSearchSubmission}>
+        <form className="searchForm" 
+        onSubmit={handleSearchSubmission}>
           <input className="nav-search" type="text" 
-                 placeholder="search for products"
+                 placeholder="Search for products"
                  value = {navSearchInput}
                  //onChange={(event) => setNavSearchInput(event.target.value)}
                  onChange={(event) => handleNavbarInput(event.target.value)} 
                  />
-          <button className="nav-btn">Submit Search</button>
+          <button className="nav-btn"><FcSearch /></button>
         </form>
 
     </div>

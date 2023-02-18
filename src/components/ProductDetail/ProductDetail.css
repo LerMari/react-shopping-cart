@@ -4,15 +4,17 @@
     display: flex;
     align-items:center;
     margin: 80px;
+    justify-content: space-around;
 }
 
 .product-desc-container img{
-    height: 500px;
+    /* height: 80%; */
     padding-right: 20px;
+    width: 60%;
 
 }
 
 .product-desc-text {
-    width: 50%;
+    width: 40%;
     border: solid 1px blue;
 }

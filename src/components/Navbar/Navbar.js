@@ -45,6 +45,7 @@ function Navbar(props) {
           <button className="nav-btn"><FcSearch /></button>
         </form>
 
+
     </div>
   )
 }

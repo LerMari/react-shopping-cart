@@ -7,7 +7,7 @@ function Product(props) {
     <Link to={`/products/${props.id}`}>
     <div class="productDisplay">
         <img className="product-img" src={props.image} alt={props.title}/>
-        <h2>{props.title}</h2>
+        <h3>{props.title}</h3>
         <p>{props.price}</p>
         <p>{props.category}</p>
         

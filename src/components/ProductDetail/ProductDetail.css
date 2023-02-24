@@ -1,5 +1,5 @@
 .product-desc-container{
-    border: solid 1px blueviolet;
+    /* border: solid 1px blueviolet; */
     background-color: white;
     display: flex;
     align-items:center;
@@ -8,13 +8,23 @@
 }
 
 .product-desc-container img{
-    /* height: 80%; */
-    padding-right: 20px;
-    width: 60%;
+    height: 500px;
+    padding: 20px;
+    /* width: 60%; */
 
 }
 
 .product-desc-text {
     width: 40%;
-    border: solid 1px blue;
+    /* border: solid 1px blue; */
+    box-shadow: 1px 1px 20px rgba(0,0,0,0.3);
+    padding: 24px;
+    margin: 24px;
+}
+
+#cart-button {
+    background-color: black;
+    color: white;
+    height: 35px;
+    width: 150px;
 }

@@ -55,6 +55,9 @@ function Homepage(props) {
   return (
     <div>
         {/* <button onClick={fetchProducts}>Fetch Products</button> */}
+        <div className="banner-container"><img src="https://images.unsplash.com/photo-1576188973526-0e5d7047b0cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1778&q=80"
+        className="banner-img"></img>
+        </div>
         <div className="prod-cont">
             {products.filter(
               item => props.productSearchValue === ""?

@@ -4,3 +4,16 @@
     flex-wrap: wrap;
     padding: 30px;
 }
+
+.banner-container {
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+}
+.banner-img {
+    width: 95%;
+    height: 250px;
+    border-radius: 16px;
+    object-fit: cover;
+
+}

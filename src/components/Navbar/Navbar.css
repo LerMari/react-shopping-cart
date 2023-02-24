@@ -1,6 +1,6 @@
 .navbar{
-    background-color: lightgray;
-    height: 80px;
+    background-color: black;
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -15,6 +15,7 @@ align-items: center;
 #logo {
     font-family: 'Gloock', serif;
     font-size: 60px;
+    color: white;
 }
 
 .nav-icon {
@@ -23,7 +24,7 @@ align-items: center;
 
 .navlink{
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 24px;
     font-family: 'Montserrat', sans-serif;
 }

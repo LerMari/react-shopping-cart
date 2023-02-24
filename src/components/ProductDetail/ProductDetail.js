@@ -25,7 +25,7 @@ function ProductDetail(props) {
         <h2>${selectedProduct?.price}</h2>
         <h4>Description</h4>
         <p>{selectedProduct?.description}</p>
-        <button onClick={()=>props.addProductToCart(selectedProduct)}>Add to cart</button>
+        <button id="cart-button" onClick={()=>props.addProductToCart(selectedProduct)}>Add to cart</button>
       </div>
     </div>
   )
